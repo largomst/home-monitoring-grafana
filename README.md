@@ -90,7 +90,7 @@ To change default MQTT username and password, run the following, replacing `[USE
 $ cd 01-mosquitto
 $ echo -n "" > users
 $ docker run --rm -v `pwd`/mosquitto.conf:/mosquitto/config/mosquitto.conf -v `pwd`/users:/mosquitto/config/users eclipse-mosquitto:1.5 mosquitto_passwd -b /mosquitto/config/users [USER] [PASSWORD]
-$ cd -
+$ cd -p
 ```
 
 Then, update the `MQTT_USER` and `MQTT_PASSWORD` constants in all the subdirectories, and launch docker compose again.
